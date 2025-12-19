@@ -1,0 +1,23 @@
+# Default: use LF everywhere
+* text=auto eol=lf
+
+# Markdown files
+*.md text eol=lf
+*.mdx text eol=lf
+
+# JavaScript / TypeScript
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+
+# Config files
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Shell scripts (important)
+*.sh text eol=lf
+
+# Windows-only files
+*.bat text eol=crlf
