@@ -3,23 +3,19 @@
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
-
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
-
- @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
+ * Physical AI Book - Unified Sidebar Configuration
+ *
+ * Creates a book-style navigation with all modules in a single sidebar
+ * for seamless reading experience.
+ *
+ * @type {import('@docusaurus/plugin-content-docs').SidebarsConfig}
  */
 const sidebars = {
-  // Module 1: ROS 2 Nervous System sidebar
-  module1Sidebar: [
+  // Unified book sidebar - all modules in one navigation
+  bookSidebar: [
     {
       type: 'category',
-      label: 'Module 1: The Robotic Nervous System',
+      label: 'Module 1: ROS 2 Foundations',
       collapsed: false,
       items: [
         'module-1-ros2/introduction',
@@ -29,13 +25,10 @@ const sidebars = {
         'module-1-ros2/chapter-4-urdf-files',
       ],
     },
-  ],
-  // Module 2: Digital Twin sidebar
-  module2Sidebar: [
     {
       type: 'category',
-      label: 'Module 2: The Digital Twin',
-      collapsed: false,
+      label: 'Module 2: Digital Twin',
+      collapsed: true,
       items: [
         'module-2-digital-twin/introduction',
         'module-2-digital-twin/chapter-1-digital-twins',
@@ -44,13 +37,10 @@ const sidebars = {
         'module-2-digital-twin/chapter-4-sensor-simulation',
       ],
     },
-  ],
-  // Module 3: NVIDIA Isaac sidebar
-  module3Sidebar: [
     {
       type: 'category',
-      label: 'Module 3: The AI-Robot Brain',
-      collapsed: false,
+      label: 'Module 3: NVIDIA Isaac',
+      collapsed: true,
       items: [
         'module-3-nvidia-isaac/introduction',
         'module-3-nvidia-isaac/chapter-1-ai-robot-brain',
@@ -59,13 +49,10 @@ const sidebars = {
         'module-3-nvidia-isaac/chapter-4-nav2-navigation',
       ],
     },
-  ],
-  // Module 4: Vision-Language-Action sidebar
-  module4Sidebar: [
     {
       type: 'category',
       label: 'Module 4: Vision-Language-Action',
-      collapsed: false,
+      collapsed: true,
       items: [
         'module-4-vla/introduction',
         'module-4-vla/chapter-1-vla-systems',

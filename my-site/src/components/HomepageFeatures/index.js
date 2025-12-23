@@ -1,49 +1,69 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
-const FeatureList = [
+const ModuleList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Module 1: ROS 2 Foundations',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Master the Robot Operating System 2 - the nervous system of modern robots.
+        Learn nodes, topics, services, and actions for building robust robot software.
       </>
     ),
+    link: '/docs/module-1-ros2/introduction',
+    chapters: 4,
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Module 2: Digital Twin',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Build virtual replicas of physical robots using Gazebo and Unity.
+        Simulate physics, sensors, and environments for safe development and testing.
       </>
     ),
+    link: '/docs/module-2-digital-twin/introduction',
+    chapters: 4,
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Module 3: NVIDIA Isaac',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Leverage GPU-accelerated perception and navigation with NVIDIA Isaac.
+        Deploy AI models for visual SLAM, object detection, and autonomous navigation.
       </>
     ),
+    link: '/docs/module-3-nvidia-isaac/introduction',
+    chapters: 4,
+  },
+  {
+    title: 'Module 4: Vision-Language-Action',
+    description: (
+      <>
+        Connect natural language to robot actions using VLA architectures.
+        Integrate speech recognition, LLM planning, and end-to-end autonomous systems.
+      </>
+    ),
+    link: '/docs/module-4-vla/introduction',
+    chapters: 4,
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Module({title, description, link, chapters}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx('col col--6', styles.moduleCol)}>
+      <div className={styles.moduleCard}>
+        <div className="padding--md">
+          <Heading as="h3">{title}</Heading>
+          <p>{description}</p>
+          <div className={styles.moduleFooter}>
+            <span className={styles.chapterCount}>{chapters} Chapters</span>
+            <Link className="button button--primary button--sm" to={link}>
+              Read Module
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -53,9 +73,16 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className="text--center margin-bottom--lg">
+          <Heading as="h2">What You Will Learn</Heading>
+          <p className={styles.sectionSubtitle}>
+            Four comprehensive modules taking you from ROS 2 basics to building
+            autonomous humanoid robots with AI capabilities.
+          </p>
+        </div>
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {ModuleList.map((props, idx) => (
+            <Module key={idx} {...props} />
           ))}
         </div>
       </div>

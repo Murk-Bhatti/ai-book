@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'AI-Spec-Driven Book',
-  tagline: 'Physical AI and Humanoid Robotics',
+  title: 'Physical AI Book',
+  tagline: 'Building Humanoid Robots with ROS 2, Simulation, and AI',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -72,35 +72,16 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'AI Book',
+        title: 'Physical AI Book',
         logo: {
-          alt: 'AI Book Logo',
+          alt: 'Physical AI Book Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'module1Sidebar',
+            to: '/docs/module-1-ros2/introduction',
+            label: 'Start Reading',
             position: 'left',
-            label: 'Module 1: ROS 2',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'module2Sidebar',
-            position: 'left',
-            label: 'Module 2: Digital Twin',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'module3Sidebar',
-            position: 'left',
-            label: 'Module 3: NVIDIA Isaac',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'module4Sidebar',
-            position: 'left',
-            label: 'Module 4: VLA',
           },
           {
             href: 'https://github.com/your-org/ai-book',
@@ -113,10 +94,10 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Modules',
+            title: 'Book Modules',
             items: [
               {
-                label: 'Module 1: ROS 2',
+                label: 'Module 1: ROS 2 Foundations',
                 to: '/docs/module-1-ros2/introduction',
               },
               {
@@ -128,7 +109,7 @@ const config = {
                 to: '/docs/module-3-nvidia-isaac/introduction',
               },
               {
-                label: 'Module 4: VLA',
+                label: 'Module 4: Vision-Language-Action',
                 to: '/docs/module-4-vla/introduction',
               },
             ],
@@ -137,13 +118,21 @@ const config = {
             title: 'Resources',
             items: [
               {
-                label: 'ROS 2 Documentation',
+                label: 'ROS 2 Humble Docs',
                 href: 'https://docs.ros.org/en/humble/',
+              },
+              {
+                label: 'NVIDIA Isaac ROS',
+                href: 'https://nvidia-isaac-ros.github.io/',
+              },
+              {
+                label: 'Nav2 Navigation',
+                href: 'https://docs.nav2.org/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} AI-Spec-Driven Book. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Physical AI Book. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

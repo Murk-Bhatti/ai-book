@@ -16,11 +16,15 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className={styles.heroDescription}>
+          A comprehensive guide to building intelligent humanoid robots using ROS 2,
+          digital twins, NVIDIA Isaac, and vision-language-action systems.
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/module-1-ros2/introduction">
+            Start Reading
           </Link>
         </div>
       </div>
@@ -32,8 +36,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title="Home"
+      description="Learn to build intelligent humanoid robots with ROS 2, simulation, and AI. A practical guide covering robot foundations, digital twins, NVIDIA Isaac, and VLA systems.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
